@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43849E4024B8FFC800553E80 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849E3F24B8FFC800553E80 /* ImageVC.swift */; };
+		43849E4224B9000200553E80 /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849E4124B9000200553E80 /* MainTVC.swift */; };
+		43849E4424B9005400553E80 /* ButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849E4324B9005400553E80 /* ButtonVC.swift */; };
+		43849E4624B9216E00553E80 /* ActionVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849E4524B9216E00553E80 /* ActionVCViewController.swift */; };
 		43B4B58D24B53A8B003B1042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4B58C24B53A8B003B1042 /* AppDelegate.swift */; };
 		43B4B58F24B53A8B003B1042 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4B58E24B53A8B003B1042 /* SceneDelegate.swift */; };
 		43B4B59124B53A8B003B1042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4B59024B53A8B003B1042 /* ViewController.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43849E3F24B8FFC800553E80 /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
+		43849E4124B9000200553E80 /* MainTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
+		43849E4324B9005400553E80 /* ButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonVC.swift; sourceTree = "<group>"; };
+		43849E4524B9216E00553E80 /* ActionVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionVCViewController.swift; sourceTree = "<group>"; };
 		43B4B58924B53A8B003B1042 /* EXPOSUREDIARY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EXPOSUREDIARY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B4B58C24B53A8B003B1042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B4B58E24B53A8B003B1042 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +74,10 @@
 				43B4B59A24B53A8C003B1042 /* LaunchScreen.storyboard */,
 				43B4B59D24B53A8C003B1042 /* Info.plist */,
 				43B4B59524B53A8B003B1042 /* EXPOSUREDIARY.xcdatamodeld */,
+				43849E3F24B8FFC800553E80 /* ImageVC.swift */,
+				43849E4124B9000200553E80 /* MainTVC.swift */,
+				43849E4324B9005400553E80 /* ButtonVC.swift */,
+				43849E4524B9216E00553E80 /* ActionVCViewController.swift */,
 			);
 			path = EXPOSUREDIARY;
 			sourceTree = "<group>";
@@ -143,8 +155,12 @@
 			files = (
 				43B4B59124B53A8B003B1042 /* ViewController.swift in Sources */,
 				43B4B58D24B53A8B003B1042 /* AppDelegate.swift in Sources */,
+				43849E4024B8FFC800553E80 /* ImageVC.swift in Sources */,
 				43B4B59724B53A8B003B1042 /* EXPOSUREDIARY.xcdatamodeld in Sources */,
+				43849E4224B9000200553E80 /* MainTVC.swift in Sources */,
+				43849E4624B9216E00553E80 /* ActionVCViewController.swift in Sources */,
 				43B4B58F24B53A8B003B1042 /* SceneDelegate.swift in Sources */,
+				43849E4424B9005400553E80 /* ButtonVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
