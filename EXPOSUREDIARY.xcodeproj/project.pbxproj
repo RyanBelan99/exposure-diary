@@ -10,9 +10,7 @@
 		43849E4024B8FFC800553E80 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849E3F24B8FFC800553E80 /* ImageVC.swift */; };
 		43849E4224B9000200553E80 /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849E4124B9000200553E80 /* MainTVC.swift */; };
 		43849E4824B937DA00553E80 /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849E4724B937DA00553E80 /* StatsVC.swift */; };
-		43849E4A24B937F200553E80 /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849E4924B937F200553E80 /* AddVC.swift */; };
-		43849E4C24B9485400553E80 /* StatSeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849E4B24B9485400553E80 /* StatSeque.swift */; };
-		43849E5024BA4C3400553E80 /* AddSeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849E4F24BA4C3400553E80 /* AddSeque.swift */; };
+		43849E5224BA4DFC00553E80 /* AddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849E5124BA4DFC00553E80 /* AddVC.swift */; };
 		43B4B58D24B53A8B003B1042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4B58C24B53A8B003B1042 /* AppDelegate.swift */; };
 		43B4B58F24B53A8B003B1042 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4B58E24B53A8B003B1042 /* SceneDelegate.swift */; };
 		43B4B59124B53A8B003B1042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4B59024B53A8B003B1042 /* ViewController.swift */; };
@@ -26,9 +24,7 @@
 		43849E3F24B8FFC800553E80 /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 		43849E4124B9000200553E80 /* MainTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
 		43849E4724B937DA00553E80 /* StatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
-		43849E4924B937F200553E80 /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
-		43849E4B24B9485400553E80 /* StatSeque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatSeque.swift; sourceTree = "<group>"; };
-		43849E4F24BA4C3400553E80 /* AddSeque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSeque.swift; sourceTree = "<group>"; };
+		43849E5124BA4DFC00553E80 /* AddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVC.swift; sourceTree = "<group>"; };
 		43B4B58924B53A8B003B1042 /* EXPOSUREDIARY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EXPOSUREDIARY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B4B58C24B53A8B003B1042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B4B58E24B53A8B003B1042 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,21 +47,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		43849E4D24BA4BF000553E80 /* Seques */ = {
-			isa = PBXGroup;
-			children = (
-				43849E4B24B9485400553E80 /* StatSeque.swift */,
-				43849E4F24BA4C3400553E80 /* AddSeque.swift */,
-			);
-			path = Seques;
-			sourceTree = "<group>";
-		};
 		43849E4E24BA4C0400553E80 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				43849E4924B937F200553E80 /* AddVC.swift */,
 				43849E3F24B8FFC800553E80 /* ImageVC.swift */,
 				43849E4724B937DA00553E80 /* StatsVC.swift */,
+				43849E5124BA4DFC00553E80 /* AddVC.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -90,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				43849E4E24BA4C0400553E80 /* UI */,
-				43849E4D24BA4BF000553E80 /* Seques */,
+				43849E4124B9000200553E80 /* MainTVC.swift */,
 				43B4B58C24B53A8B003B1042 /* AppDelegate.swift */,
 				43B4B58E24B53A8B003B1042 /* SceneDelegate.swift */,
 				43B4B59024B53A8B003B1042 /* ViewController.swift */,
@@ -99,7 +86,6 @@
 				43B4B59A24B53A8C003B1042 /* LaunchScreen.storyboard */,
 				43B4B59D24B53A8C003B1042 /* Info.plist */,
 				43B4B59524B53A8B003B1042 /* EXPOSUREDIARY.xcdatamodeld */,
-				43849E4124B9000200553E80 /* MainTVC.swift */,
 			);
 			path = EXPOSUREDIARY;
 			sourceTree = "<group>";
@@ -175,11 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43849E4A24B937F200553E80 /* AddVC.swift in Sources */,
 				43B4B59124B53A8B003B1042 /* ViewController.swift in Sources */,
-				43849E4C24B9485400553E80 /* StatSeque.swift in Sources */,
-				43849E5024BA4C3400553E80 /* AddSeque.swift in Sources */,
 				43B4B58D24B53A8B003B1042 /* AppDelegate.swift in Sources */,
+				43849E5224BA4DFC00553E80 /* AddVC.swift in Sources */,
 				43849E4024B8FFC800553E80 /* ImageVC.swift in Sources */,
 				43B4B59724B53A8B003B1042 /* EXPOSUREDIARY.xcdatamodeld in Sources */,
 				43849E4224B9000200553E80 /* MainTVC.swift in Sources */,
