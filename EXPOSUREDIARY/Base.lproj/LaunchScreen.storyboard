@@ -37,7 +37,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="e7U-LP-3Ha" firstAttribute="top" secondItem="NGh-km-BSd" secondAttribute="bottom" constant="1" id="Z7p-hG-JEU"/>
-                            <constraint firstItem="NGh-km-BSd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="kne-aQ-PVG"/>
+                            <constraint firstItem="NGh-km-BSd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kne-aQ-PVG"/>
                             <constraint firstItem="e7U-LP-3Ha" firstAttribute="centerX" secondItem="NGh-km-BSd" secondAttribute="centerX" id="v2f-VV-skF"/>
                             <constraint firstItem="NGh-km-BSd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-20" id="ynM-kC-sP6"/>
                         </constraints>

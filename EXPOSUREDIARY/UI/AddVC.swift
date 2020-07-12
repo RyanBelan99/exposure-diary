@@ -35,11 +35,21 @@ class AddVC: UIViewController {
         contact = Int(sender.value)
     }
     @IBAction func onAdd(_ sender: UIBarButtonItem) {
+        if(titlefield.text == ""){
+            alertInput()
+            return
+        }
+        
         let context = AppDelegate.cdContext
         if let entry = NSEntityDescription.entity(forEntityName: "Entry", in: context) {
             let data = NSManagedObject(entity: entry, insertInto: context)
-            data.setValue(titlefield.text ?? "_", forKey: "title")
-            data.setValue(activities[purposePicker.selectedRow(inComponent: 0)] as String, forKey: "purpose")
+            data.setValue(titlefield.text, forKey: "title")
+            if(activities[purposePicker.selectedRow(inComponent: 0)] as String == "Other"){
+                data.setValue(alertCustomInput(), forKey: "purpose")
+            }else{
+                data.setValue(activities[purposePicker.selectedRow(inComponent: 0)] as String, forKey: "purpose")
+            }
+            
             data.setValue(durationField.text ?? 0, forKey: "duration")
             data.setValue(mileageField.text ?? 0, forKey: "mileage")
             data.setValue(String(ContactStepper.value), forKey: "contacts")
@@ -50,10 +60,36 @@ class AddVC: UIViewController {
             }
             
         }
-        print("Done")
         performSegue(withIdentifier: "exitAddTC", sender: sender)
         presentingViewController?.dismiss(animated: true)
     }
+    
+    //MARK: - Alerts
+    
+    func alertInput(){
+        let alert = UIAlertController(title: "You are missing an Input!", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        present(alert, animated: true)
+    }
+    func alertCustomInput() -> String {
+        var result: String = ""
+        let alert1 = UIAlertController(title: "Please Input Custom Purpose", message: "", preferredStyle: .alert)
+        
+        alert1.addTextField(configurationHandler: { textField in
+            textField.placeholder = "Purpose"
+        })
+        alert1.addAction(UIAlertAction(title: "Submit", style: .default) { action in
+            result = alert1.textFields?[0].text as! String
+        })
+        
+        alert1.addAction(UIAlertAction(title: "Cancel", style: .cancel){ action in
+            result = "Other"
+        })
+        present(alert1, animated: true)
+        return result
+    }
+    
+    
 }
 
 extension AddVC: UIPickerViewDataSource, UIPickerViewDelegate {
