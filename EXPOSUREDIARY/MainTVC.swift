@@ -20,10 +20,8 @@ class MainTableViewCell: UITableViewCell {
 }
 
 class MainTVC: UITableViewController {
-
-    
-    
     var data: [NSManagedObject] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String

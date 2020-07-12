@@ -150,7 +150,6 @@
                                     <outlet property="labelOutput" destination="xKs-Me-hEK" id="CJI-5o-BVN"/>
                                     <outlet property="mileageOutput" destination="GAl-I3-5zh" id="XND-U4-H7C"/>
                                     <outlet property="purposeOutput" destination="8HV-ls-93S" id="xQ1-7N-7bj"/>
-                                    <segue destination="CXJ-en-3Zy" kind="show" identifier="statSeque" id="hIM-Uh-HhU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -160,6 +159,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="evx-S1-ehv">
+                        <leftBarButtonItems>
+                            <barButtonItem id="Vy0-rd-hnm"/>
+                            <barButtonItem title="Stats" id="9aS-Ea-yBI">
+                                <connections>
+                                    <segue destination="CXJ-en-3Zy" kind="presentation" id="sVq-3N-eDr"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="GyW-5m-4JA">
                             <connections>
                                 <segue destination="HCk-Z5-uWz" kind="show" identifier="addSegue" id="Ftm-N9-kOt"/>
@@ -169,29 +176,124 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1I-P5-mDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992.75362318840587" y="130.58035714285714"/>
+            <point key="canvasLocation" x="1000" y="50"/>
         </scene>
         <!--StatsVC-->
         <scene sceneID="CYr-za-JaX">
             <objects>
                 <viewController id="CXJ-en-3Zy" customClass="StatsVC" customModule="EXPOSUREDIARY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mOf-le-NqV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="nOA-nb-xG4">
+                                <rect key="frame" x="20" y="156" width="202" height="274.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Mileage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMY-hc-bLK">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="604-en-BCq">
+                                        <rect key="frame" x="0.0" y="63.5" width="111.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Number of Contacts:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCl-eZ-Tww">
+                                        <rect key="frame" x="0.0" y="127" width="201.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Places Visited: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wT-63-QeJ">
+                                        <rect key="frame" x="0.0" y="190.5" width="202" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longest Distance Trip:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oS-uJ-QWA">
+                                        <rect key="frame" x="0.0" y="254" width="171" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="JZH-pZ-jJf">
+                                <rect key="frame" x="244" y="160" width="42" height="270.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAW-45-tMW">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLu-mB-FoC">
+                                        <rect key="frame" x="0.0" y="62.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v62-MZ-t6m">
+                                        <rect key="frame" x="0.0" y="125" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF3-qk-b29">
+                                        <rect key="frame" x="0.0" y="187.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzg-6F-xxA">
+                                        <rect key="frame" x="0.0" y="250" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sAW-45-tMW" firstAttribute="top" secondItem="JZH-pZ-jJf" secondAttribute="top" id="OTG-kU-O8g"/>
+                                    <constraint firstItem="sAW-45-tMW" firstAttribute="leading" secondItem="JZH-pZ-jJf" secondAttribute="leading" id="U4J-r2-int"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Trip Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqc-Fh-fPi">
+                                <rect key="frame" x="80.5" y="13" width="239" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="239" id="FAk-yI-u7o"/>
+                                    <constraint firstAttribute="height" constant="44" id="JNQ-VN-U5W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nOA-nb-xG4" firstAttribute="leading" secondItem="XPx-4R-t4Q" secondAttribute="leading" constant="20" id="6ZO-p7-T5D"/>
+                            <constraint firstItem="JZH-pZ-jJf" firstAttribute="top" secondItem="Yqc-Fh-fPi" secondAttribute="bottom" constant="103" id="Ldv-yZ-vIJ"/>
+                            <constraint firstItem="JZH-pZ-jJf" firstAttribute="leading" secondItem="nOA-nb-xG4" secondAttribute="trailing" constant="22" id="NIZ-PH-DBE"/>
+                            <constraint firstItem="nOA-nb-xG4" firstAttribute="top" secondItem="Yqc-Fh-fPi" secondAttribute="bottom" constant="99" id="QXV-Pw-3V9"/>
+                            <constraint firstItem="Yqc-Fh-fPi" firstAttribute="centerX" secondItem="XPx-4R-t4Q" secondAttribute="leading" constant="200" id="h6V-Ki-l2f"/>
+                            <constraint firstItem="Yqc-Fh-fPi" firstAttribute="top" secondItem="XPx-4R-t4Q" secondAttribute="top" constant="13" id="lOg-KH-DQ0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XPx-4R-t4Q"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WS5-Y0-KHo">
-                        <barButtonItem key="rightBarButtonItem" title="Delete" id="ZMu-bH-yCS">
-                            <connections>
-                                <action selector="deleteEntry:" destination="CXJ-en-3Zy" id="JoN-DP-G8C"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="WS5-Y0-KHo"/>
+                    <connections>
+                        <outlet property="totalContacts" destination="v62-MZ-t6m" id="FwX-Hg-ZU9"/>
+                        <outlet property="totalDistance" destination="Mzg-6F-xxA" id="IgX-Ro-8Zy"/>
+                        <outlet property="totalDuration" destination="iLu-mB-FoC" id="pQV-7X-Csa"/>
+                        <outlet property="totalMileage" destination="sAW-45-tMW" id="07s-04-8tC"/>
+                        <outlet property="totalPlaces" destination="PF3-qk-b29" id="Sm9-AL-sgp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbE-Yg-xXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1594" y="794"/>
+            <point key="canvasLocation" x="2044.9275362318842" y="318.75"/>
         </scene>
         <!--AddVC-->
         <scene sceneID="29t-HL-Hbu">
@@ -352,7 +454,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkD-M8-2wN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="HwZ-Dt-pKL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1926.0869565217392" y="75.669642857142847"/>
+            <point key="canvasLocation" x="2023" y="-360"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9N6-K8-eJQ">
