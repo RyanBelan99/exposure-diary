@@ -5,3 +5,46 @@
   Created by Ryan Belan on 7/12/20.
   Copyright © 2020 University of Rochester. All rights reserved.
 */
+
+
+
+"str_totalMileage" = "Kilométrage total:";
+"str_totalDuration" = "Durée totale:";
+"str_totalContacts" = "Nombre total de contacts:";
+"str_totalPlaces" = "Nombre de lieux visités:";
+"str_totalDistance" = "Voyage le plus long:";
+"str_mainTitle" = "Info voyage";
+
+"str_addTitle" = "Titre:";
+"str_addPurpose" = "Objectif:";
+"str_addMileage" = "Kilométrage:";
+"str_addDuration" = "Durée:";
+"str_contactLabel" = "Nombre de contacts:";
+"str_topLeftButton" = "Terminé";
+
+//alert
+"str_ok"= "D'accord";
+"str_alertTitle" = "Il vous manque une entrée!";
+
+"str_alertWarning" = "Avertissement sur les risques";
+"str_alertMessage" = "Vous avez été en contact avec deux personnes nombreuses!";
+"str_cancel" = "Annuler";
+
+//array
+"str_Errands" = "Courses";
+"str_Work" = "Travail";
+"str_Vacation" = "Vacances";
+"str_Travel" = "Voyage";
+"str_Exercise" = "Exercice";
+"str_Visit" = "Visite";
+"str_Outdoors" = "En plein air";
+"str_Other" = "Autre";
+
+//Cell
+
+"str_CellLabel" = "Titre:";
+"str_CellPurpose" = "Objectif:";
+"str_CellDuration" = "Durée:";
+"str_CellMileage" = "Kilométrage:";
+"str_CellContacts" = "Nombre de contacts:";
+"str_statsButton" = "Statistiques";
