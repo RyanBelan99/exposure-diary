@@ -77,8 +77,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
     // MARK: - Conveniences
-    //@Author - Ar
+    //@Author - Arthur Roolfs
     
     static var persistentContainer: NSPersistentContainer {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer

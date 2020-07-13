@@ -145,11 +145,16 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="contactsOutput" destination="Ixu-Zb-grj" id="W6l-E6-6X3"/>
+                                    <outlet property="contactsOutputM" destination="rcI-9W-NSP" id="Id2-RH-nfq"/>
                                     <outlet property="durationOutput" destination="qLr-e9-6qY" id="gGE-NX-VRC"/>
+                                    <outlet property="durationOutputM" destination="aLv-S5-VYV" id="xO3-ZD-JGU"/>
                                     <outlet property="imageOutput" destination="Jqr-Ba-yko" id="fw9-Co-yYw"/>
                                     <outlet property="labelOutput" destination="xKs-Me-hEK" id="CJI-5o-BVN"/>
+                                    <outlet property="labelOutputM" destination="OTb-TH-6T4" id="o2P-Ok-Sd8"/>
                                     <outlet property="mileageOutput" destination="GAl-I3-5zh" id="XND-U4-H7C"/>
+                                    <outlet property="mileageOutputM" destination="HY9-Jq-Sjg" id="hAS-M1-Oie"/>
                                     <outlet property="purposeOutput" destination="8HV-ls-93S" id="xQ1-7N-7bj"/>
+                                    <outlet property="purposeOutputM" destination="tv5-R9-feO" id="ryo-AI-iSJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -173,6 +178,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="statsButton" destination="9aS-Ea-yBI" id="Jim-kO-d4Z"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1I-P5-mDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -284,6 +292,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WS5-Y0-KHo"/>
                     <connections>
+                        <outlet property="mainTitle" destination="Yqc-Fh-fPi" id="das-L1-A6F"/>
                         <outlet property="totalContacts" destination="v62-MZ-t6m" id="FwX-Hg-ZU9"/>
                         <outlet property="totalDistance" destination="Mzg-6F-xxA" id="IgX-Ro-8Zy"/>
                         <outlet property="totalDuration" destination="iLu-mB-FoC" id="pQV-7X-Csa"/>
@@ -428,11 +437,15 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="3x7-5S-zYl" firstAttribute="leading" secondItem="Vyz-bk-ejd" secondAttribute="leading" constant="3" id="3d5-JT-yha"/>
                             <constraint firstItem="3x7-5S-zYl" firstAttribute="top" secondItem="Vyz-bk-ejd" secondAttribute="top" id="HHt-Qw-6Ur"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vyz-bk-ejd"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EEL-rF-Z4k" appends="YES" id="f9S-ky-ydR"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="tmg-Dl-l5h">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="cDo-3s-J3E">
@@ -443,16 +456,27 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ContactStepper" destination="kjv-Px-D9a" id="wbK-3a-NSM"/>
+                        <outlet property="addDuration" destination="9h1-2u-5Zn" id="nun-Et-S2F"/>
+                        <outlet property="addMileage" destination="RYG-iy-IX3" id="j9g-bx-3lx"/>
+                        <outlet property="addPurpose" destination="ZXO-S4-ryb" id="mD1-bb-C8y"/>
+                        <outlet property="addTitle" destination="Tpr-oo-hA2" id="zLt-8o-akA"/>
                         <outlet property="contactLabel" destination="Ed9-nF-AMF" id="wvj-5S-hNq"/>
+                        <outlet property="contactTitle" destination="6ZW-BO-Yn2" id="VVH-NA-ksc"/>
                         <outlet property="durationField" destination="y1b-gb-fsr" id="c1I-JF-28P"/>
                         <outlet property="mileageField" destination="gXE-JE-a72" id="DPw-5s-BXP"/>
                         <outlet property="purposePicker" destination="7eO-Za-38B" id="MyA-DI-VLx"/>
                         <outlet property="titlefield" destination="uvp-vZ-YnH" id="kvJ-E4-jqa"/>
+                        <outlet property="topLeftButton" destination="cDo-3s-J3E" id="CW3-F9-YMP"/>
                         <segue destination="HwZ-Dt-pKL" kind="unwind" identifier="exitAddTC" unwindAction="unwindToTVC:" id="jUE-yu-44u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkD-M8-2wN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="HwZ-Dt-pKL" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="EEL-rF-Z4k">
+                    <connections>
+                        <action selector="tapRecon:" destination="HCk-Z5-uWz" id="egN-Vu-Mdn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2023" y="-360"/>
         </scene>

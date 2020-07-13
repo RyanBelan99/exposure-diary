@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+//Main Cell Class
 class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var labelOutput: UILabel!
     @IBOutlet weak var purposeOutput: UILabel!
@@ -17,14 +18,23 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var contactsOutput: UILabel!
     @IBOutlet weak var imageOutput: UIImageView!
     
+    
+    //localization
+    @IBOutlet weak var labelOutputM: UILabel!
+    @IBOutlet weak var purposeOutputM: UILabel!
+    @IBOutlet weak var mileageOutputM: UILabel!
+    @IBOutlet weak var durationOutputM: UILabel!
+    @IBOutlet weak var contactsOutputM: UILabel!
 }
 
 class MainTVC: UITableViewController {
     var data: [NSManagedObject] = []
     
+    @IBOutlet weak var statsButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
+        statsButton.title = NSLocalizedString("str_statsButton", comment: "")
         readData()
     }
 
@@ -42,12 +52,19 @@ class MainTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath) as! MainTableViewCell
         let temp = data[indexPath.row]
+        //loading CoreData
         cell.labelOutput.text = temp.value(forKeyPath: "title") as? String
         cell.purposeOutput.text = temp.value(forKeyPath: "purpose") as? String
         cell.durationOutput.text = temp.value(forKeyPath: "duration") as? String
         cell.mileageOutput.text = temp.value(forKey: "mileage") as? String
         cell.contactsOutput.text = temp.value(forKey: "contacts") as? String
-
+        
+        //localization
+        cell.labelOutputM.text = NSLocalizedString("str_CellLabel", comment: "")
+        cell.purposeOutputM.text = NSLocalizedString("str_CellPurpose", comment: "")
+        cell.durationOutputM.text = NSLocalizedString("str_CellDuration", comment: "")
+        cell.mileageOutputM.text = NSLocalizedString("str_CellMileage", comment: "")
+        cell.contactsOutputM.text = NSLocalizedString("str_CellContacts", comment: "")
         return cell
     }
     
@@ -60,10 +77,8 @@ class MainTVC: UITableViewController {
     //MARK: - CoreData
     
     func readData() {
-        let context = AppDelegate.cdContext
-        let fetch = NSFetchRequest<NSManagedObject>(entityName: "Entry")
         do {
-            data = try context.fetch(fetch)
+            data = try AppDelegate.cdContext.fetch(NSFetchRequest<NSManagedObject>(entityName: "Entry"))
         } catch _ as NSError {
             print("Could not fetch requested item.")
         }

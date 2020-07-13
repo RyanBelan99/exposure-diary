@@ -1,0 +1,52 @@
+/* 
+  Localizable.strings
+  EXPOSUREDIARY
+
+  Created by Ryan Belan on 7/12/20.
+  Copyright © 2020 University of Rochester. All rights reserved.
+*/
+
+//StatsVC
+"str_totalMileage" = "Total Mileage:";
+"str_totalDuration" = "Total Duration:";
+"str_totalContacts" = "Total Number of Contacts:";
+"str_totalPlaces" = "Number of Places Visited:";
+"str_totalDistance" = "Longest Distance Trip:";
+"str_mainTitle" = "All Trip Information";
+
+"str_addTitle" = "Title:";
+"str_addPurpose" = "Purpose:";
+"str_addMileage" = "Mileage:";
+"str_addDuration" = "Duration:";
+"str_contactLabel" = "Number of Contacts:";
+"str_topLeftButton" = "Done";
+
+//alert
+"str_ok"= "OK";
+"str_alertTitle" = "You are missing an Input!";
+
+"str_alertWarning" = "Risk Warning";
+"str_alertMessage" = "You have been in contact with two many people!";
+"str_cancel" = "Cancel";
+
+//array
+"str_Errands" = "Errands";
+"str_Work" = "Work";
+"str_Vacation" = "Vacation";
+"str_Travel" = "Travel";
+"str_Exercise" = "Exercise";
+"str_Visit" = "Visit";
+"str_Outdoors" = "Outdoors";
+"str_Other" = "Other";
+
+//Cell
+
+"str_CellLabel" = "Title:";
+"str_CellPurpose" = "Purpose:";
+"str_CellDuration" = "Duration:";
+"str_CellMileage" = "Mileage:";
+"str_CellContacts" = "Number of Contacts:";
+"str_statsButton" = "Stats";
+
+
+

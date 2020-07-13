@@ -10,15 +10,28 @@ import UIKit
 import CoreData
 class AddVC: UIViewController {
     
-    let activities: [String] = ["Errands","Work","Vacation","Travel","Exercise","Visit","Outdoors","Other"]
+    //Picker view array choices
+    let activities: [String] = ["str_Errands","str_Work","str_Vacation","str_Travel","str_Exercise","str_Visit","str_Outdoors","str_Other"]
+    
+    
+    @IBOutlet weak var addTitle: UILabel!
+    @IBOutlet weak var addPurpose: UILabel!
+    @IBOutlet weak var addMileage: UILabel!
+    @IBOutlet weak var addDuration: UILabel!
+    @IBOutlet weak var contactLabel: UILabel!
+    @IBOutlet weak var contactTitle: UILabel!
+    
     @IBOutlet weak var titlefield: UITextField!
     @IBOutlet weak var purposePicker: UIPickerView!
     @IBOutlet weak var durationField: UITextField!
     @IBOutlet weak var mileageField: UITextField!
     
-    @IBOutlet weak var contactLabel: UILabel!
+   
+    @IBOutlet weak var topLeftButton: UIBarButtonItem!
     @IBOutlet weak var ContactStepper: UIStepper!
     
+    //updates UIStepper label
+    //@Author - Arthur Roolfs
     var contact = 0 {
         willSet{
             contactLabel?.text = newValue.description
@@ -29,27 +42,33 @@ class AddVC: UIViewController {
         super.viewDidLoad()
         ContactStepper.value = 0
         titlefield.becomeFirstResponder()
+        
+        addTitle.text = NSLocalizedString("str_addTitle", comment: "")
+        addPurpose.text = NSLocalizedString("str_addPurpose", comment: "")
+        addMileage.text = NSLocalizedString("str_addMileage", comment: "")
+        addDuration.text = NSLocalizedString("str_addDuration", comment: "")
+        contactTitle.text = NSLocalizedString("str_contactLabel", comment: "")
+        topLeftButton.title = NSLocalizedString("str_topLeftButton", comment: "")
     }
     
+    //When stepper is activated label goes up or down
     @IBAction func stepperRecon(_ sender: UIStepper) {
         contact = Int(sender.value)
     }
     @IBAction func onAdd(_ sender: UIBarButtonItem) {
+        
+        //Alerts user when title is missing and prevents the add
         if(titlefield.text == ""){
             alertInput()
             return
         }
         
+        //Adding new entry to CoreData
         let context = AppDelegate.cdContext
         if let entry = NSEntityDescription.entity(forEntityName: "Entry", in: context) {
             let data = NSManagedObject(entity: entry, insertInto: context)
             data.setValue(titlefield.text, forKey: "title")
-            if(activities[purposePicker.selectedRow(inComponent: 0)] as String == "Other"){
-                data.setValue(alertCustomInput(), forKey: "purpose")
-            }else{
-                data.setValue(activities[purposePicker.selectedRow(inComponent: 0)] as String, forKey: "purpose")
-            }
-            
+            data.setValue(NSLocalizedString(activities[purposePicker.selectedRow(inComponent: 0)], comment: "") as String, forKey: "purpose")
             data.setValue(durationField.text ?? 0, forKey: "duration")
             data.setValue(mileageField.text ?? 0, forKey: "mileage")
             data.setValue(String(ContactStepper.value), forKey: "contacts")
@@ -60,37 +79,28 @@ class AddVC: UIViewController {
             }
             
         }
+        //Segues back to UITableViewController
         performSegue(withIdentifier: "exitAddTC", sender: sender)
         presentingViewController?.dismiss(animated: true)
     }
     
     //MARK: - Alerts
-    
+    //Missing entry alert
     func alertInput(){
-        let alert = UIAlertController(title: "You are missing an Input!", message: "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-        present(alert, animated: true)
+        let alert = UIAlertController(title: NSLocalizedString("str_alertTitle", comment: ""), message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("str_ok", comment: ""), style: .cancel))
+        present(alert, animated: true, completion: nil)
     }
-    func alertCustomInput() -> String {
-        var result: String = ""
-        let alert1 = UIAlertController(title: "Please Input Custom Purpose", message: "", preferredStyle: .alert)
-        
-        alert1.addTextField(configurationHandler: { textField in
-            textField.placeholder = "Purpose"
-        })
-        alert1.addAction(UIAlertAction(title: "Submit", style: .default) { action in
-            result = alert1.textFields?[0].text as! String
-        })
-        
-        alert1.addAction(UIAlertAction(title: "Cancel", style: .cancel){ action in
-            result = "Other"
-        })
-        present(alert1, animated: true)
-        return result
+    
+    //Keyboard recon
+    @IBAction func tapRecon(_ sender: UITapGestureRecognizer) {
+        resignFirstResponder()
     }
     
     
 }
+
+//MARK: - UIPickerView
 
 extension AddVC: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -102,7 +112,7 @@ extension AddVC: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return activities[row]
+        return NSLocalizedString(activities[row], comment: "")
     }
    
 }
