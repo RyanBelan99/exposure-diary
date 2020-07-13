@@ -479,7 +479,7 @@
                 <exit id="HwZ-Dt-pKL" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="EEL-rF-Z4k">
                     <connections>
-                        <action selector="tapRecon:" destination="HCk-Z5-uWz" id="egN-Vu-Mdn"/>
+                        <action selector="tapReconWithSender:" destination="HCk-Z5-uWz" id="xwv-I2-igy"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

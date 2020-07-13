@@ -95,8 +95,9 @@ class AddVC: UIViewController {
     
     //Keyboard recon
     @IBAction func tapRecon(sender: AnyObject) {
-        self.resignFirstResponder()
-        resignFirstResponder()
+        titlefield.resignFirstResponder()
+        durationField.resignFirstResponder()
+        mileageField.resignFirstResponder()
     }
     
     
