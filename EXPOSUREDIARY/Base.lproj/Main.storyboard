@@ -137,7 +137,7 @@
                                                 </stackView>
                                             </subviews>
                                         </stackView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jqr-Ba-yko">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bandage" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jqr-Ba-yko">
                                             <rect key="frame" x="298" y="4.5" width="85" height="81"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -294,10 +294,15 @@
                     <connections>
                         <outlet property="mainTitle" destination="Yqc-Fh-fPi" id="das-L1-A6F"/>
                         <outlet property="totalContacts" destination="v62-MZ-t6m" id="FwX-Hg-ZU9"/>
+                        <outlet property="totalContactsM" destination="JCl-eZ-Tww" id="edC-tQ-lSG"/>
                         <outlet property="totalDistance" destination="Mzg-6F-xxA" id="IgX-Ro-8Zy"/>
+                        <outlet property="totalDistanceM" destination="2oS-uJ-QWA" id="pPZ-Zy-ODA"/>
                         <outlet property="totalDuration" destination="iLu-mB-FoC" id="pQV-7X-Csa"/>
+                        <outlet property="totalDurationM" destination="604-en-BCq" id="nVU-Fu-7El"/>
                         <outlet property="totalMileage" destination="sAW-45-tMW" id="07s-04-8tC"/>
+                        <outlet property="totalMileageM" destination="VMY-hc-bLK" id="xhF-fB-OMK"/>
                         <outlet property="totalPlaces" destination="PF3-qk-b29" id="Sm9-AL-sgp"/>
+                        <outlet property="totalPlacesM" destination="5wT-63-QeJ" id="KVX-b1-ovR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbE-Yg-xXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -500,6 +505,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="bandage" catalog="system" width="128" height="116"/>
     </resources>
 </document>

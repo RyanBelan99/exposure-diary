@@ -23,11 +23,11 @@ class StatsVC: UIViewController {
         calculateTrip()
         
         //localization
-        totalMileage.text = NSLocalizedString("str_totalMileage", comment: "")
-        totalDuration.text = NSLocalizedString("str_totalDuration", comment: "")
-        totalContacts.text = NSLocalizedString("str_totalContacts", comment: "")
-        totalPlaces.text = NSLocalizedString("str_totalPlaces", comment: "")
-        totalDistance.text = NSLocalizedString("str_totalDistance", comment: "")
+        totalMileageM.text = NSLocalizedString("str_totalMileage", comment: "")
+        totalDurationM.text = NSLocalizedString("str_totalDuration", comment: "")
+        totalContactsM.text = NSLocalizedString("str_totalContacts", comment: "")
+        totalPlacesM.text = NSLocalizedString("str_totalPlaces", comment: "")
+        totalDistanceM.text = NSLocalizedString("str_totalDistance", comment: "")
         mainTitle.text = NSLocalizedString("str_mainTitle", comment: "")
             
         //display stat results
@@ -42,14 +42,21 @@ class StatsVC: UIViewController {
             alertContacts()
         }
     }
-   
+   //stat outlet labels
     @IBOutlet weak var totalMileage: UILabel!
     @IBOutlet weak var totalDuration: UILabel!
     @IBOutlet weak var totalContacts: UILabel!
     @IBOutlet weak var totalPlaces: UILabel!
     @IBOutlet weak var totalDistance: UILabel!
-    @IBOutlet weak var mainTitle: UILabel!
     
+    
+    //Localization
+    @IBOutlet weak var totalMileageM: UILabel!
+    @IBOutlet weak var totalDurationM: UILabel!
+    @IBOutlet weak var totalContactsM: UILabel!
+    @IBOutlet weak var totalPlacesM: UILabel!
+    @IBOutlet weak var totalDistanceM: UILabel!
+    @IBOutlet weak var mainTitle: UILabel!
     
     //This method calculates the results from CoreData 
     func calculateTrip(){

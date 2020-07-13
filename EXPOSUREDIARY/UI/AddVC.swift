@@ -43,6 +43,7 @@ class AddVC: UIViewController {
         ContactStepper.value = 0
         titlefield.becomeFirstResponder()
         
+        //localization
         addTitle.text = NSLocalizedString("str_addTitle", comment: "")
         addPurpose.text = NSLocalizedString("str_addPurpose", comment: "")
         addMileage.text = NSLocalizedString("str_addMileage", comment: "")
@@ -93,7 +94,8 @@ class AddVC: UIViewController {
     }
     
     //Keyboard recon
-    @IBAction func tapRecon(_ sender: UITapGestureRecognizer) {
+    @IBAction func tapRecon(sender: AnyObject) {
+        self.resignFirstResponder()
         resignFirstResponder()
     }
     
