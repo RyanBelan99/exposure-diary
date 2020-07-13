@@ -39,6 +39,7 @@ class StatsVC: UIViewController {
         
         //Warns(Alert) user when in contact with to many people
         if(tcontacts > 10){
+            self.view.backgroundColor = UIColor.red
             alertContacts()
         }
     }
