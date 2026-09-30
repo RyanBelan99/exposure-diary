@@ -13,7 +13,6 @@
 		43849E5524BBCFA500553E80 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43849E5724BBCFA500553E80 /* Localizable.strings */; };
 		43B4B58D24B53A8B003B1042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4B58C24B53A8B003B1042 /* AppDelegate.swift */; };
 		43B4B58F24B53A8B003B1042 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4B58E24B53A8B003B1042 /* SceneDelegate.swift */; };
-		43B4B59124B53A8B003B1042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B4B59024B53A8B003B1042 /* ViewController.swift */; };
 		43B4B59424B53A8B003B1042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B4B59224B53A8B003B1042 /* Main.storyboard */; };
 		43B4B59724B53A8B003B1042 /* EXPOSUREDIARY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43B4B59524B53A8B003B1042 /* EXPOSUREDIARY.xcdatamodeld */; };
 		43B4B59924B53A8C003B1042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B4B59824B53A8C003B1042 /* Assets.xcassets */; };
@@ -29,7 +28,6 @@
 		43B4B58924B53A8B003B1042 /* EXPOSUREDIARY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EXPOSUREDIARY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B4B58C24B53A8B003B1042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B4B58E24B53A8B003B1042 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		43B4B59024B53A8B003B1042 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43B4B59324B53A8B003B1042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43B4B59624B53A8B003B1042 /* EXPOSUREDIARY.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EXPOSUREDIARY.xcdatamodel; sourceTree = "<group>"; };
 		43B4B59824B53A8C003B1042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 				43849E4124B9000200553E80 /* MainTVC.swift */,
 				43B4B58C24B53A8B003B1042 /* AppDelegate.swift */,
 				43B4B58E24B53A8B003B1042 /* SceneDelegate.swift */,
-				43B4B59024B53A8B003B1042 /* ViewController.swift */,
 				43B4B59224B53A8B003B1042 /* Main.storyboard */,
 				43B4B59824B53A8C003B1042 /* Assets.xcassets */,
 				43B4B59A24B53A8C003B1042 /* LaunchScreen.storyboard */,
@@ -164,7 +161,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43B4B59124B53A8B003B1042 /* ViewController.swift in Sources */,
 				43B4B58D24B53A8B003B1042 /* AppDelegate.swift in Sources */,
 				43849E5224BA4DFC00553E80 /* AddVC.swift in Sources */,
 				43B4B59724B53A8B003B1042 /* EXPOSUREDIARY.xcdatamodeld in Sources */,

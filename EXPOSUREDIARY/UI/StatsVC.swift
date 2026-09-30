@@ -65,18 +65,27 @@ class StatsVC: UIViewController {
             let data: [NSManagedObject] = try AppDelegate.cdContext.fetch(NSFetchRequest<NSManagedObject>(entityName: "Entry"))
             var tempD: Int = 0
             for temp in data {
-                tmileage += (temp.value(forKeyPath: "mileage") as? NSString)!.integerValue
-                tdistance += (temp.value(forKeyPath: "duration")as? NSString)!.integerValue
-                tcontacts += (temp.value(forKeyPath: "contacts") as? NSString)!.integerValue
+                let mileage = intValue(temp.value(forKeyPath: "mileage"))
+                tmileage += mileage
+                tdistance += intValue(temp.value(forKeyPath: "duration"))
+                tcontacts += intValue(temp.value(forKeyPath: "contacts"))
                 tPlaces += 1
-                if((temp.value(forKeyPath: "mileage") as? NSString)!.integerValue > tempD){
-                    longestDistance = temp.value(forKeyPath: "title") as! String
-                    tempD = (temp.value(forKeyPath: "mileage") as? NSString)!.integerValue
+                if mileage > tempD {
+                    longestDistance = temp.value(forKeyPath: "title") as? String ?? ""
+                    tempD = mileage
                 }
             }
         }catch _ as NSError {
             print("Couldn't read data")
         }
+    }
+
+    // Core Data stores these fields as strings; coerce safely so a missing or
+    // non-string value yields 0 instead of crashing the whole Stats screen.
+    private func intValue(_ value: Any?) -> Int {
+        if let s = value as? NSString { return s.integerValue }
+        if let i = value as? Int { return i }
+        return 0
     }
     
     //MARK: - Alert
